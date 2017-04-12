@@ -102,3 +102,10 @@ options:
     description: |
       SSL CA to use with the certificate and key provided - this is only
       required if you are providing a privately signed ssl_cert and ssl_key.
+  worker-multiplier:
+    type: float
+    default: 2.0
+    description: |
+      The CPU core multiplier to use when configuring worker processes.
+      By default, the number of workers for each daemon is set to
+      twice the number of CPU cores a service unit has.
